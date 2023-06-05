@@ -21,7 +21,7 @@ class DecoratedBackgroundOne extends StatelessWidget {
           SizedBox(
             width: double.maxFinite,
             child: SvgPicture.asset(
-              AppAssets.lightBackgroundPatternSvg,
+              AppAssets.bgOneSvg,
               fit: BoxFit.cover,
             ),
           ),

@@ -124,6 +124,108 @@ class Homeframe extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 180,
+                  width: double.maxFinite,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        AppColors.greenLight,
+                        AppColors.greenDark,
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(
+                      AppDimentions().borderRadius,
+                    ),
+                  ),
+                  child: Stack(
+                    children: [
+                      SizedBox(
+                        width: double.maxFinite,
+                        height: double.maxFinite,
+                        child: SvgPicture.asset(
+                          AppAssets.bgTwoSvg,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        width: double.maxFinite,
+                        child: Row(
+                          children: [
+                            Flexible(
+                              child: SizedBox(
+                                width: double.infinity,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    BontonText(
+                                      title: 'Special Deal For',
+                                      fontSize: 22,
+                                      isBold: true,
+                                      textColor: Colors.white,
+                                    ),
+                                    BontonText(
+                                      title: 'October',
+                                      fontSize: 22,
+                                      isBold: true,
+                                      textColor: Colors.white,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Flexible(
+                              child: SizedBox(
+                                width: double.infinity,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    BontonText(
+                                      title: 'Special Deal For October.',
+                                      fontSize: 22,
+                                      isBold: true,
+                                      textColor: Colors.white,
+                                    ),
+                                    const SizedBox(
+                                      height: 12,
+                                    ),
+                                    GestureDetector(
+                                      onTap: () {
+                                        // callBackFunction();
+                                      },
+                                      child: Container(
+                                        // width: MediaQuery.of(context).size.width,
+                                        height: 40,
+                                        width: AppDimentions().getWidth(context) / 4,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(6),
+                                          color: Colors.white,
+                                        ),
+
+                                        alignment: Alignment.center,
+                                        child: BontonText(
+                                          title: 'Buy Now',
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
+                                          textColor: AppColors.greenLight,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
@@ -195,7 +297,7 @@ class BottomNavIcon extends StatelessWidget {
     return BlocBuilder<HomepageCubit, HomepageState>(
       builder: (context, state) {
         return Flexible(
-          flex: state.selectedPage == index ? 4 : 3,
+          flex: state.selectedPage == index ? 5 : 3,
           child: GestureDetector(
             onTap: () {
               context.read<HomepageCubit>().changeHomepage(index);

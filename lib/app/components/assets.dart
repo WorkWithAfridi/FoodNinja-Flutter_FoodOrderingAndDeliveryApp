@@ -3,7 +3,8 @@ class AppAssets {
   static const String basePng = 'assets/pngs';
 
   static const String appLogoSvg = '$baseSvg/app_logo.svg';
-  static const String lightBackgroundPatternSvg = '$baseSvg/light_background_pattern.svg';
+  static const String bgOneSvg = '$baseSvg/background_pattern_one.svg';
+  static const String bgTwoSvg = '$baseSvg/background_pattern_two.svg';
   static const String introOneSvg = '$baseSvg/intro_one.svg';
   static const String introTwoSvg = '$baseSvg/intro_two.svg';
   static const String googleSvg = '$baseSvg/google.svg';
