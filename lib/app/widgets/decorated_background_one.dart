@@ -4,7 +4,11 @@ import 'package:food_ninja/app/components/assets.dart';
 import 'package:food_ninja/app/components/dimentions.dart';
 
 class DecoratedBackgroundOne extends StatelessWidget {
-  const DecoratedBackgroundOne({super.key});
+  DecoratedBackgroundOne({
+    super.key,
+    this.onlyAppbar = false,
+  });
+  bool onlyAppbar;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +18,12 @@ class DecoratedBackgroundOne extends StatelessWidget {
       color: Colors.white,
       child: Stack(
         children: [
-          SvgPicture.asset(
-            AppAssets.lightBackgroundPatternSvg,
+          SizedBox(
+            width: double.maxFinite,
+            child: SvgPicture.asset(
+              AppAssets.lightBackgroundPatternSvg,
+              fit: BoxFit.cover,
+            ),
           ),
           Container(
             height: AppDimentions().getHeight(context),
@@ -24,11 +32,20 @@ class DecoratedBackgroundOne extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [
-                  Colors.white.withOpacity(.01),
-                  Colors.white.withOpacity(.6),
-                  const Color(0xffF4F4F4),
-                ],
+                colors: onlyAppbar
+                    ? [
+                        Colors.white.withOpacity(.1),
+                        Colors.white.withOpacity(.8),
+                        Colors.white,
+                        Colors.white,
+                        Colors.white,
+                        const Color(0xffF4F4F4),
+                      ]
+                    : [
+                        Colors.white.withOpacity(.01),
+                        Colors.white.withOpacity(.6),
+                        const Color(0xffF4F4F4),
+                      ],
               ),
             ),
           )

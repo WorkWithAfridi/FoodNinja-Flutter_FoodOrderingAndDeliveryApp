@@ -30,6 +30,7 @@ environment:
 dependencies:
   bloc: ^8.1.2
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
@@ -69,6 +70,9 @@ flutter:
     - family: BentonSansRegular
       fonts:
         - asset: assets/fonts/BentonSansRegular.otf
+    - family: BentonSansBold
+      fonts:
+        - asset: assets/fonts/BentonSansBold.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

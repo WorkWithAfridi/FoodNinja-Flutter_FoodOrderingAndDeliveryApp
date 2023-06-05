@@ -34,7 +34,7 @@ class IntroScreen extends StatelessWidget {
                     BontonText(
                       title: 'Find your Comfort',
                       fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                      isBold: true,
                     ),
                     const SizedBox(
                       height: 6,
@@ -42,12 +42,12 @@ class IntroScreen extends StatelessWidget {
                     BontonText(
                       title: 'Food here.',
                       fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                      isBold: true,
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Column(
                   children: [
@@ -91,7 +91,7 @@ class IntroScreen extends StatelessWidget {
                     BontonText(
                       title: 'FoodNinja is where your',
                       fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                      isBold: true,
                     ),
                     const SizedBox(
                       height: 6,
@@ -99,12 +99,12 @@ class IntroScreen extends StatelessWidget {
                     BontonText(
                       title: 'Comfort food lives.',
                       fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                      isBold: true,
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Column(
                   children: [

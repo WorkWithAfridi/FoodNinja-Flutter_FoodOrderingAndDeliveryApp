@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:food_ninja/app/components/assets.dart';
 import 'package:food_ninja/app/components/colors.dart';
 import 'package:food_ninja/app/components/dimentions.dart';
+import 'package:food_ninja/app/components/navigator.dart';
+import 'package:food_ninja/app/screens/homeframe/homeframe.dart';
 import 'package:food_ninja/app/widgets/benton_text.dart';
 import 'package:food_ninja/app/widgets/custom_button.dart';
 import 'package:food_ninja/app/widgets/custom_text_field.dart';
@@ -19,7 +21,7 @@ class LoginScreen extends StatelessWidget {
         width: AppDimentions().getWidth(context),
         child: Stack(
           children: [
-            const DecoratedBackgroundOne(),
+            DecoratedBackgroundOne(),
             SizedBox(
               height: AppDimentions().getHeight(context),
               width: AppDimentions().getWidth(context),
@@ -56,8 +58,7 @@ class LoginScreen extends StatelessWidget {
                           'FoodNinja',
                           style: TextStyle(
                             fontSize: 40,
-                            fontFamily: 'BentonSansRegular',
-                            fontWeight: FontWeight.bold,
+                            fontFamily: 'BentonSansBold',
                             color: Colors.white,
                           ),
                         ),
@@ -75,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                   BontonText(
                     title: 'Login to your account',
                     fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                    isBold: true,
                   ),
                   Column(
                     children: [
@@ -216,9 +217,17 @@ class LoginScreen extends StatelessWidget {
                     width: AppDimentions().getWidth(context) / 2,
                     child: CustomButton(
                       title: 'Login',
-                      callBackFunction: () {},
+                      callBackFunction: () {
+                        NavigatorServices().toReplacement(
+                          context: context,
+                          widget: const Homeframe(),
+                        );
+                      },
                     ),
-                  )
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
                 ],
               ),
             ),

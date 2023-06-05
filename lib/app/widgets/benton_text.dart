@@ -11,8 +11,10 @@ class BontonText extends StatelessWidget {
     this.textAlign = TextAlign.start,
     this.maxLines = 10,
     this.textDecoration = TextDecoration.none,
+    this.isBold = false,
   });
 
+  bool isBold;
   TextDecoration textDecoration;
   String title;
   Color textColor;
@@ -27,7 +29,7 @@ class BontonText extends StatelessWidget {
       title,
       style: TextStyle(
         decoration: textDecoration,
-        fontFamily: 'BentonSansRegular',
+        fontFamily: isBold ? 'BentonSansBold' : 'BentonSansRegular',
         color: textColor,
         fontWeight: fontWeight,
         overflow: TextOverflow.ellipsis,

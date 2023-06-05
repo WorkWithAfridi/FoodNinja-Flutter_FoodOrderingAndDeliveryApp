@@ -25,7 +25,7 @@ class SplashScreen extends StatelessWidget {
           width: AppDimentions().getWidth(context),
           child: Stack(
             children: [
-              const DecoratedBackgroundOne(),
+              DecoratedBackgroundOne(),
               SizedBox(
                 height: AppDimentions().getHeight(context),
                 width: AppDimentions().getWidth(context),
@@ -61,8 +61,7 @@ class SplashScreen extends StatelessWidget {
                         'FoodNinja',
                         style: TextStyle(
                           fontSize: 36,
-                          fontFamily: 'BentonSansRegular',
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'BentonSansBold',
                           color: Colors.white,
                         ),
                       ),
