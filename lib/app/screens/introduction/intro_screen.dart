@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_ninja/app/components/assets.dart';
 import 'package:food_ninja/app/components/dimentions.dart';
+import 'package:food_ninja/app/components/navigator.dart';
+import 'package:food_ninja/app/screens/login/login_screen.dart';
 import 'package:food_ninja/app/widgets/benton_text.dart';
 import 'package:food_ninja/app/widgets/custom_button.dart';
 
@@ -156,9 +158,14 @@ class IntroScreen extends StatelessWidget {
                     pageController.animateToPage(
                       1,
                       duration: const Duration(
-                        milliseconds: 200,
+                        milliseconds: 500,
                       ),
-                      curve: Curves.bounceInOut,
+                      curve: Curves.fastOutSlowIn,
+                    );
+                  } else if (pageController.page == 1) {
+                    NavigatorServices().toReplacement(
+                      context: context,
+                      widget: const LoginScreen(),
                     );
                   }
                 },

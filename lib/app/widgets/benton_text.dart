@@ -10,8 +10,10 @@ class BontonText extends StatelessWidget {
     this.fontSize = 16,
     this.textAlign = TextAlign.start,
     this.maxLines = 10,
+    this.textDecoration = TextDecoration.none,
   });
 
+  TextDecoration textDecoration;
   String title;
   Color textColor;
   FontWeight fontWeight;
@@ -24,6 +26,7 @@ class BontonText extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
+        decoration: textDecoration,
         fontFamily: 'BentonSansRegular',
         color: textColor,
         fontWeight: fontWeight,

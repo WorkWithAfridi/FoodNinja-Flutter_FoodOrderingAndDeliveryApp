@@ -8,9 +8,10 @@ class DecoratedBackgroundOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: AppDimentions().getHeight(context),
       width: AppDimentions().getWidth(context),
+      color: Colors.white,
       child: Stack(
         children: [
           SvgPicture.asset(
@@ -25,9 +26,8 @@ class DecoratedBackgroundOne extends StatelessWidget {
                 end: Alignment.bottomCenter,
                 colors: [
                   Colors.white.withOpacity(.01),
-                  Colors.white.withOpacity(.8),
-                  Colors.white,
-                  Colors.white,
+                  Colors.white.withOpacity(.6),
+                  const Color(0xffF4F4F4),
                 ],
               ),
             ),
