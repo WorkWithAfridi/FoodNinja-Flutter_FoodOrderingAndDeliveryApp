@@ -33,6 +33,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
+  flutter_svg: ^2.0.3
+  page_transition: ^2.0.9
   very_good_analysis: ^4.0.0+1
 
 dev_dependencies:
@@ -66,7 +68,7 @@ flutter:
   fonts:
     - family: BentonSansRegular
       fonts:
-        - asset: assets/fonts/BentonSans Regular.otf
+        - asset: assets/fonts/BentonSansRegular.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

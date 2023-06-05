@@ -1,7 +1,8 @@
 import 'package:flutter/animation.dart';
 
 class AppColors {
-  Color scaffoldBackground = const Color(0xffFFFFFF);
-  Color greenLight = const Color(0xff4ce289);
-  Color greenDark = const Color(0xff21c17a);
+  static const Color scaffoldBackground = Color(0xffFFFFFF);
+  static const Color greenLight = Color(0xff4ce289);
+  static const Color greenDark = Color(0xff21c17a);
+  static const Color color001B0D = Color(0xff001B0D);
 }
